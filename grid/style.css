@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&display=swap');
+:root{
+    --prim-moderate-violet: hsl(263, 55%, 52%);
+    --prim-very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --prim-very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+*{
+    margin: 0;
+}
+
+body{
+    padding: 2rem;
+    background-color: var(--light-gray);
+}
+
+html{
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', serif;
+}
+.bg-violet{
+    background-color: var(--prim-moderate-violet);
+}
+.bg-dark-blue{
+    background: var(--prim-very-dark-blackish-blue);
+}
+.bg-gray-blue{
+    background: var(--prim-very-dark-grayish-blue);
+}
+.bg-white{
+    background: #fff;
+}
+
+.testimonial{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+}
+.card{
+    border-radius: 1rem;
+    padding: 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.card-head{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+.card-head > img{
+    border-radius: 40px;
+    width: 40px;
+}
+.card-head > img.daniel{
+    border: 2px solid var(--light-grayish-blue);
+}
+
+.information__name{
+    font-weight: 600;
+}
+
+.card-title{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+.card-description{}
+
+[data-name="daniel"] .card-title,
+[data-name="daniel"] .information__name,
+[data-name="jonathan"] .card-title,
+[data-name="jonathan"] .information__name,
+[data-name="patrick"] .card-title,
+[data-name="patrick"] .information__name{
+    font-weight: 600;
+    color: #fff;
+}
+[data-name="daniel"] .card-description,
+[data-name="daniel"] .information__verif,
+[data-name="jonathan"] .card-description,
+[data-name="jonathan"] .information__verif,
+[data-name="patrick"] .card-description,
+[data-name="patrick"] .information__verif{
+    color: hsla(20, 23%, 97%, 0.534);
+}
+
+.card * {
+    z-index: 3;
+}
+.bg-pendukung{
+    position: relative;
+}
+.bg-pendukung > img{
+    position: absolute;
+    right: 100px;
+    top: 0;
+    z-index: 1;
+}
+
+@media only screen and (min-width: 378px) {
+.card[data-name="daniel"]{
+    grid-column: 1/3;
+    grid-row: 1/1;
+}
+.card[data-name="jonathan"]{
+    grid-column: 3/4;
+    grid-row: 1/1;
+}
+.card[data-name="jean"]{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.card[data-name="patrick"]{
+    grid-column: 2/4;
+    grid-row: 2/3;
+}
+.card[data-name="kira"]{
+    grid-column:4/5;
+    grid-row: 1/3;
+}
+}
+
+@media only screen and (max-width: 376px) {
+    body{
+        padding: 1rem;
+    }
+    .testimonial{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 1rem;
+    }
+
+    .bg-pendukung > img{
+        position: absolute;
+        right: 0;
+        top: -20px;
+        z-index: 1;
+    }
+}
