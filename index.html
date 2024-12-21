@@ -7,30 +7,54 @@
 </head>
 <style>
     body{
-        height: 100vh;
-        text-align: center;
+        margin: 0;
     }
+    .left-side a{
+        text-decoration: none;
+        color: springgreen;
+    }
+    .main-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 1rem;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .left-side{
+        background-color: tomato;
+        padding: 1rem;
+    }
+
+    .left-side article{
+        color: azure;
+    }
+
     .list-content{
         display: flex;
         align-items: center;
         flex-direction: column;
         width: 100%;
-        height: 70%;
+        height: 100vh;
         /* text-align: center; */
-        padding-top: 50px;
     }
 </style>
 <body>
-    <section class="list-content">
-        <h1>List Collection Frontend Mentor</h1>
-        <div style="display: flex; flex-direction: column;">
-            <a href="./FM/index.html">Preview Card</a>
-            <a href="./responsive-four-card/index.html">Four Card Feature Section</a>
-
-        </div>
-    </section>
-    <footer>
-        <a href="http://www.github.com/mbank14">mashofa</a>
-    </footer>
+    <main class="main-wrapper">
+        <section class="left-side">
+            <article>
+                <h3></h3>
+                <p>Github <a href="http://www.github.com/mbank14">mbank14</a></p>
+                <p>Website <a href="http://www.mashofa.my.id">mashofa</a></p>
+            </article>
+        </section>
+        <section class="list-content right-side">
+            <h1>List Collection Frontend Mentor</h1>
+            <div style="display: flex; flex-direction: column;">
+                <a href="./FM/index.html">Preview Card</a>
+                <a href="./responsive-four-card/index.html">Four Card Feature Section</a>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

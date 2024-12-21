@@ -115,11 +115,22 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
 
+    .card-images > picture{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .card-images > picture > img{
+        width: 100%;
+        position: relative;
+        height: 100%;
+      }
     @media only screen and (min-width: 376px) {
 
       .card{
         flex-direction: row;
-        max-width: 45vw;
+        max-width: 50vw;
       }
 
       .card-image{
@@ -128,6 +139,9 @@
         background-size: cover;
         height: 100%;
       }
+
+    
+    
       
       .card > div{
         flex: 0 0 50%;
@@ -150,32 +164,40 @@
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="card-image"></div>
-    <section class="card-content__wrapper">
-      <p class="card-content__caption">Perfume</p>
-      <h1 class="font-faunces card-content__title">Gabrielle Essence Eau De Parfum</h1>
-      <p class="card-content__description">
-        A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-        Perfumer-Creator for the House of CHANEL.
-      </p>
-      <div class="card-content__price">
-        <p class="font-faunces card-content__price__discount">$149.99</p>
-        <p class="card-content__price__regular">$169.99</p>
+  <main>
+
+    <div class="card">
+      <div class="card-images">
+        <picture>
+          <source media="(max-width:650px)" srcset="./images/image-product-mobile.jpg">
+          <img src="./images/image-product-desktop.jpg" alt="Gabrielle Parfum" >
+        </picture>
       </div>
-      <a class="card-content__button">
-        <i>
-          <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z" fill="#FFF"/></svg>
-        </i>
-        <span>
-          Add to cart
-        </span>
-      </a>
-    </section>
-  </div>
-  <div class="attribution">
+      <section class="card-content__wrapper">
+        <p class="card-content__caption">Perfume</p>
+        <h1 class="font-faunces card-content__title">Gabrielle Essence Eau De Parfum</h1>
+        <p class="card-content__description">
+          A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+          Perfumer-Creator for the House of CHANEL.
+        </p>
+        <div class="card-content__price">
+          <p class="font-faunces card-content__price__discount">$149.99</p>
+          <p class="card-content__price__regular">$169.99</p>
+        </div>
+        <a class="card-content__button">
+          <i>
+            <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z" fill="#FFF"/></svg>
+          </i>
+          <span>
+            Add to cart
+          </span>
+        </a>
+      </section>
+    </div>
+  </main>
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://www.github.com/mbank14" target="_blank">mashofa</a>.
-  </div>
+  </footer>
 </body>
 </html>
