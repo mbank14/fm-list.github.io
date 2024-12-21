@@ -8,6 +8,7 @@
   
   <title>Frontend Mentor | Four card feature section</title>
 
+  <link rel="stylesheet" href="style.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
 
@@ -20,57 +21,57 @@
 
 </head>
 <body>
-  <div role="main">
+  <div class="wrapper" role="main">
     <div class="main">
-      <section class="">
-        <h1 class="card-title">Reliable, efficient delivery</h1>
-        <h2 class="card-description">Powered by Technology</h2>
-        <p>
+      <section class="featured-wrapper" aria-labelledby="section-title" role="region">
+        <h1 id="section-title" aria-level="1">Reliable, efficient delivery</h1>
+        <h2 class="card-description" aria-describedby="section-title">Powered by Technology</h2>
+        <p aria-describedby="section-title">
           Our Artificial Intelligence powered tools use millions of project data points 
           to ensure that your project is successful
         </p>
       </section>
 
       <div class="features">
-        <div class="card">
-          <section>
+        <div class="cards">
+          <section class="card-supervisor">
             <h2 class="card-title">Supervisor</h2>
             <p class="card-description">
               Monitors activity to identify project roadblocks
             </p>
-            <figure>
+            <div>
               <img src="./images/icon-supervisor.svg" alt="">
-            </figure>
+            </div>
           </section>
 
-          <section>
+          <section class="card-team">
             <h2 class="card-title">Team Builder</h2>
             <p class="card-description">
               Scans our talent network to create the optimal team for your project
             </p>
-            <figure>
+            <div>
               <img src="./images/icon-team-builder.svg" alt="">
-            </figure>
+            </div>
           </section>
 
-          <section>
+          <section class="card-karma">
             <h2 class="card-title">Karma</h2>
             <p class="card-description">
               Regularly evaluates our talent to ensure quality
             </p>
-            <figure>
+            <div>
               <img src="./images/icon-karma.svg" alt="">
-            </figure>
+            </div>
           </section>
 
-          <section>
+          <section class="card-calculator">
             <h2 class="card-title">Calculator</h2>
             <p class="card-description">
               Uses data from past projects to provide better delivery estimates
             </p>
-            <figure>
+            <div>
               <img src="./images/icon-calculator.svg" alt="">
-            </figure>
+            </div>
           </section>
 
         </div>
