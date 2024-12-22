@@ -8,6 +8,7 @@
   
   <title>Frontend Mentor | Interactive rating component</title>
 
+  <link rel="stylesheet" href="style.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -15,31 +16,56 @@
   </style>
 </head>
 <body>
-
+  <main class="main">
+    <section class="card ">
   <!-- Rating state start -->
+      <div class="card-rate d-none">
+        <div class="star">
+          <img src="./images/icon-star.svg" alt="">
+        </div>
+        <h2 class="card-rate__title">
+          How did we do?
+        </h2>
+        <p class="card-rate__description">
 
-  How did we do?
-
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
+          Please let us know how we did with your support request. All feedback is appreciated 
+          to help us improve our offering!
+        </p>
+        <div class="card-rate__rating">
+          <input type="radio" name="rate" id="" value="1">
+          <input type="radio" name="rate" id="" value="2">
+          <input type="radio" name="rate" id="" value="3">
+          <input type="radio" name="rate" id="" value="4">
+          <input type="radio" name="rate" id="" value="5">
+          1 2 3 4 5
+        </div>
+        <button class="btn-submit">
+          Submit
+        </button>
+      </div>
 
   <!-- Rating state end -->
 
   <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
+  <div class="card-thanks ">
+    <div>
+      <img src="./images/illustration-thank-you.svg"/>
+    </div>
+    <p class="card-thanks__caption">
+      You selected <span data-rate=""></span> out of 5
+    </p>
+    <h2 class="card-thanks__title">
+      Thank you!
+    </h2>
+    <p class="card-thanks__description">
+      We appreciate you taking the time to give a rating. If you ever need more support, 
+      don’t hesitate to get in touch!
+    </p>
+  </div>
 
   <!-- Thank you state end -->
-
+    </section>
+  </main>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
