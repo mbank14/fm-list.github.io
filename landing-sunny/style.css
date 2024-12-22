@@ -25,3 +25,71 @@ html{
     font-size: 18px;
 }
 
+.d-none{
+    display: none;
+}
+
+.container {
+    padding: 0 1rem;
+}
+
+
+.navigation-wrapper{
+    padding: 1rem 0;
+    background: var(--Dark-moderate-cyan);
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+#menuBurger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#menuBurger > div{
+    width: 25px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: var(--Dark-desaturated-cyan);
+}
+
+/* hero */
+.hero{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hero div{
+    position: absolute;
+    z-index: 4;
+    top: 30%;
+    right: 0;
+    left: 0;
+}
+.hero div > h1{
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.hero div > img{
+    width: 30px;
+    margin-top: 2rem;
+}
+
+.hero img{
+    width: 100%;
+    z-index: 1;
+}
