@@ -28,7 +28,9 @@ html{
 .d-none{
     display: none;
 }
-
+.font-title{
+    font-family: 'Fraunces', sans-serif;
+}
 .container {
     padding: 0 1rem;
 }
@@ -93,3 +95,10 @@ html{
     width: 100%;
     z-index: 1;
 }
+
+/* text-image */
+.text-image{
+    
+}
+.text-image > img{}
+.text-image.image-left{}
