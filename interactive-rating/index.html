@@ -19,7 +19,7 @@
   <main class="main">
     <section class="card ">
   <!-- Rating state start -->
-      <div class="card-rate d-none">
+      <div id="cardRate" class="card-rate ">
         <div class="star">
           <img src="./images/icon-star.svg" alt="">
         </div>
@@ -32,14 +32,23 @@
           to help us improve our offering!
         </p>
         <div class="card-rate__rating">
-          <input type="radio" name="rate" id="" value="1">
-          <input type="radio" name="rate" id="" value="2">
-          <input type="radio" name="rate" id="" value="3">
-          <input type="radio" name="rate" id="" value="4">
-          <input type="radio" name="rate" id="" value="5">
-          1 2 3 4 5
+          <input type="radio" name="rate" id="angka1" value="1">
+          <label for="angka1" class="circle">1</label>
+
+          <input type="radio" name="rate" id="angka2" value="2">
+          <label for="angka2" class="circle">2</label>
+
+          <input type="radio" name="rate" id="angka3" value="3">
+          <label for="angka3" class="circle">3</label>
+
+          <input type="radio" name="rate" id="angka4" value="4">
+          <label for="angka4" class="circle">4</label>
+
+          <input type="radio" name="rate" id="angka5" value="5">
+          <label for="angka5" class="circle">5</label>
+          
         </div>
-        <button class="btn-submit">
+        <button id="btnSubmit" class="btn-submit">
           Submit
         </button>
       </div>
@@ -47,12 +56,12 @@
   <!-- Rating state end -->
 
   <!-- Thank you state start -->
-  <div class="card-thanks ">
+  <div id="thanksCard" class="card-thanks d-none">
     <div>
       <img src="./images/illustration-thank-you.svg"/>
     </div>
     <p class="card-thanks__caption">
-      You selected <span data-rate=""></span> out of 5
+      You selected <span id="dataRate" data-rate=""></span> out of 5
     </p>
     <h2 class="card-thanks__title">
       Thank you!
@@ -71,5 +80,32 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script>
+    const btnSubmit = document.getElementById("btnSubmit");
+    const thanksCard = document.getElementById("thanksCard");
+    const cardRate = document.getElementById("cardRate");
+    const dataRate = document.getElementById("dataRate");
+
+    btnSubmit.addEventListener("click", ()=> {
+      const ratings = document.querySelectorAll('input[name="rate"]:checked');
+      if(ratings){
+        cardRate.classList.add("d-none");
+        thanksCard.classList.remove("d-none");
+
+        dataRate.dataset.rate = ratings[0].value
+        let valRating = dataRate.dataset.rate; 
+        
+        dataRate.innerHTML = valRating
+
+        setTimeout(() => {
+          thanksCard.classList.add("d-none");
+          cardRate.classList.remove("d-none");
+
+          document.querySelectorAll('input[type="radio"]').forEach(radio => radio.checked = false)
+        }, 3000)
+      } 
+    })
+  </script>
 </body>
 </html>

@@ -68,8 +68,13 @@ main{
     padding: 1rem 0;
     text-transform: uppercase;
     font-weight: 700;
+    cursor: pointer;
 }
 
+.btn-submit:hover{
+    background: #fff;
+    color: var(--Very-Dark-Blue);
+}
 
 .card-thanks{
     text-align: center;
@@ -95,6 +100,45 @@ main{
 .card-thanks__description{
     color: var(--Light-Grey);
 }
-@media only screen and (min-width: 375px){
 
+.card-rate__rating{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+input[type="radio"] {
+    display: none;
+  }
+  
+  /* Styling untuk label yang menjadi lingkaran */
+  .circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--Very-Dark-Blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+
+  input[type="radio"]:checked + .circle {
+    background-color: #fff; 
+    color: var(--Very-Dark-Blue);
+  }
+  
+
+  .circle:hover {
+    background-color: var(--orange);
+  }
+  
+@media only screen and (min-width: 375px){
+    .card{
+        max-width: 300px;
+    }
 }
