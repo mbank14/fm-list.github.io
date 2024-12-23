@@ -23,6 +23,7 @@
 
 html{
     font-size: 18px;
+    font-family: 'Barlow', sans-serif;
 }
 
 .d-none{
@@ -34,11 +35,19 @@ html{
 .container {
     padding: 0 1rem;
 }
-
+.bg-hijau{
+    background: var(--Dark-moderate-cyan);
+}
+.bg-blue{
+    background: var(--Dark-blue);
+}
 
 .navigation-wrapper{
     padding: 1rem 0;
-    background: var(--Dark-moderate-cyan);
+    /* background: var(--Dark-moderate-cyan); */
+    position: fixed;
+    z-index: 7;
+    width: 100%;
 }
 
 .nav{
@@ -98,7 +107,107 @@ html{
 
 /* text-image */
 .text-image{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     
 }
-.text-image > img{}
-.text-image.image-left{}
+.text-image > div{
+    flex: 0 0 100%;
+}
+
+.text-image__text{
+    order: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: var(--very-dark-desaturated-blue);
+}
+.text-image__text > .font-title{
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+/* .absolute-text > p, */
+.text-image__text > p{
+    color: var(--grayish-blue);
+}
+.text-image__text  a{
+    text-decoration: none;
+    color: var(--very-dark-desaturated-blue);
+    font-family: 'Fraunces';
+    font-weight: 700;
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.text-image__text  a::before{
+    content: "";
+    position: absolute;
+    width: 110%;
+    height: 6px;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    background-color: rgb(6, 189, 0);
+    z-index: -1;
+    transform: translateX(-50%);
+    border-radius: 50px;
+}
+
+.text-image__text a.underline-yellow::before{
+    background-color: var(--Yellow) !important;
+}
+.text-image__text a.underline-red::before{
+    background-color: var(--Soft-red) !important;
+}
+
+.text-image__image{
+    order: 1;
+}
+
+.text-image__image > img{
+    width: 100%;
+}
+
+.text-image.image-left{
+    flex-direction: column-reverse;
+}
+
+
+.image-absolute-text > div{
+    line-height: 0;
+}
+.image-absolute-text__wrapper{
+    position: relative;
+    display: inline-block;
+}
+.image-absolute-text__wrapper > img{
+    width: 100%;
+}
+
+.absolute-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    bottom: 0;
+    text-align: center;
+    margin: 0 1rem 3.5rem 1rem;
+    line-height: 1.5rem;
+}
+.absolute-text.cyan {
+    color: var(--Dark-desaturated-cyan);
+}
+.absolute-text.blue {
+    color: var(--Dark-blue);
+}
+
+.absolute-text > .font-title{
+    font-size: 2rem;
+}
+
