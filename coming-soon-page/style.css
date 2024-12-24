@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+ 
+--Pale-Blue: hsl(223, 100%, 88%);
+--Light-Red: hsl(354, 100%, 66%) ;  
+
+
+--Gray: hsl(0, 0%, 59%);
+--Very-Dark-Blue: hsl(209, 33%, 12%);
+
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 20px;
+    font-family: 'Libre Franklin';
+    color: var(--Gray);
+}
+
+main{
+    padding: 1rem;
+}
+
+   
+.coming-soon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 3rem;
+    text-align: center;
+}
+.coming-soon > .subscribe-email h2{
+    font-size: 1rem;
+    margin-bottom: .7rem;
+}
+.coming-soon > .subscribe-email > p{
+    font-size: .7rem;
+    margin-bottom: 2rem;
+    color: var(--Very-Dark-Blue);
+}
+
+.subscribe-email > div{
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    border-radius: 50px;
+}
+.subscribe-email > div p{
+    font-size: 14px;
+    margin-bottom: 0 !important;
+    color: red;
+}
+.coming-soon.isError .invalid-email{
+    height: 20px;
+}
+.invalid-email{
+    overflow: hidden;
+    height: 0;
+}
+
+
+.coming-soon.isError .subscribe-email > div input{
+    border: 1px solid red;
+}
+.subscribe-email > div input{
+    padding: .6rem .5rem;
+    border-radius: 50px;
+    border: 1px solid var(--Pale-Blue);
+}
+.subscribe-email > div button:hover{
+    background-color: var(--Pale-Blue);
+    color: var(--Very-Dark-Blue);
+    cursor: pointer;
+}
+.subscribe-email > div button{
+    padding: .7rem 0;
+    border-radius: 50px;
+    color: #fff;
+    background-color: cornflowerblue;
+    border: none;
+    box-shadow: 0 10px 15px rgba(135, 207, 235, 0.232);
+}
+
+
+.coming-soon strong{
+    color: var(--Very-Dark-Blue);
+}
+
+.coming-soon > .illus{
+    width: 100%;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.icons a{
+    display: inline;
+    padding: .4rem;
+    border-radius: 50px;
+    border: 1px solid var(--Gray);
+    line-height: 0;
+}
+
+
+.icons svg{
+    width: 20px;
+    color: cornflowerblue;
+    fill: cornflowerblue !important;
+}
+
+.copyright{
+    font-size: 14px;
+
+}
+@media only screen and (min-width: 400px) {
+    main{
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .coming-soon > .subscribe-email h2{
+        font-size: 2rem;
+        margin-bottom: .7rem;
+    }
+    .coming-soon > .subscribe-email > p{
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        color: var(--Very-Dark-Blue);
+    }
+    
+ .coming-soon{
+    max-width: 60vw;
+ }
+}

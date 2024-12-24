@@ -7,28 +7,66 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Ping coming soon page</title>
-
+  <link rel="stylesheet" href="style.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+   
 </head>
 <body>
+  <main>
+    <div class="coming-soon">
+      <img class="logo" src="./images/logo.svg" alt="logo">
 
-  We are launching soon!
 
-  Subscribe and get notified
+      <section class="subscribe-email">
+        <h2>  We are launching <strong>soon!</strong></h2>
+        <p>  Subscribe and get notified</p>
 
-  Notify Me
+        <div>
+          <input type="email" name="email" id="email" />
+          <div id="invalidEmail" class="invalid-email">
+            <p>Email Invalid</p>
+          </div>
+          <button id="notifMe">
+            Notify Me
+          </button>
+        </div>
+      </section>
+      <img class="illus" src="./images/illustration-dashboard.png" alt="">
 
-  &copy; Copyright Ping. All rights reserved.
+      <div>
+        <div class="icons">
+          <a href="#">
+            <svg   viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M21.95 5.005l-3.306-.004c-3.206 0-5.277 2.124-5.277 5.415v2.495H10.05v4.515h3.317l-.004 9.575h4.641l.004-9.575h3.806l-.003-4.514h-3.803v-2.117c0-1.018.241-1.533 1.566-1.533l2.366-.001.01-4.256z"></path></g></svg>
+          </a>
+          <a href="http://www.github.com/mbank14">
+            <svg   viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M24.92 12.183c0-1.586-.604-2.864-1.585-3.83.172-.547.398-1.763-.229-3.321 0 0-1.114-.348-3.628 1.315a12.695 12.695 0 0 0-3.081-.366c-1.154 0-2.322.143-3.409.44-2.596-1.747-3.74-1.391-3.74-1.391-.748 1.847-.287 3.215-.145 3.554-.883.936-1.414 2.133-1.414 3.594 0 1.111.128 2.099.44 2.964l.325.732c.879 1.614 2.606 2.655 5.677 2.983-.434.289-.885.779-1.062 1.612-.594.28-2.475.966-3.603-.944 0 0-.633-1.148-1.842-1.235 0 0-1.174-.017-.08.722 0 0 .782.367 1.326 1.738 0 0 .705 2.342 4.114 1.593v2.417s-.076.857-.867 1.143c0 0-.469.312.034.497 0 0 2.205.174 2.205-1.604v-2.643s-.09-1.047.429-1.404v4.332s-.032 1.031-.576 1.421c0 0-.362.646.433.468 0 0 1.517-.211 1.584-1.967l.035-4.383h.363l.033 4.383c.076 1.748 1.59 1.967 1.59 1.967.793.179.429-.468.429-.468-.54-.389-.579-1.421-.579-1.421v-4.297c.52.402.436 1.369.436 1.369v2.643c0 1.777 2.2 1.604 2.2 1.604.505-.186.036-.498.036-.498-.793-.286-.867-1.143-.867-1.143v-3.461c0-1.346-.574-2.056-1.137-2.435 3.277-.318 4.845-1.368 5.572-2.99-.015.027.26-.726.26-.726.25-.859.325-1.855.325-2.963h-.002z"></path></g></svg>
+          </a>
+          <a href="http://www.mashofa.my.id">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8 7.5C5.51472 7.5 3.5 9.51472 3.5 12C3.5 14.4853 5.51472 16.5 8 16.5H9.5C10.0523 16.5 10.5 16.9477 10.5 17.5V18.5C10.5 19.0523 10.0523 19.5 9.5 19.5H8C3.85786 19.5 0.5 16.1421 0.5 12C0.5 7.85786 3.85786 4.5 8 4.5H9.5C10.0523 4.5 10.5 4.94772 10.5 5.5V6.5C10.5 7.05228 10.0523 7.5 9.5 7.5H8Z"  ></path> <path d="M6.5 11.5C6.5 10.9477 6.94771 10.5 7.5 10.5H16.5C17.0523 10.5 17.5 10.9477 17.5 11.5V12.5C17.5 13.0523 17.0523 13.5 16.5 13.5H7.5C6.94772 13.5 6.5 13.0523 6.5 12.5V11.5Z"  ></path> <path d="M20.5 12C20.5 9.51472 18.4853 7.5 16 7.5H14.5C13.9477 7.5 13.5 7.05228 13.5 6.5V5.5C13.5 4.94772 13.9477 4.5 14.5 4.5H16C20.1421 4.5 23.5 7.85786 23.5 12C23.5 16.1421 20.1421 19.5 16 19.5H14.5C13.9477 19.5 13.5 19.0523 13.5 18.5V17.5C13.5 16.9477 13.9477 16.5 14.5 16.5H16C18.4853 16.5 20.5 14.4853 20.5 12Z"  ></path> </g></svg>
+          </a>
+        </div>
+        <div class="copyright">
+          <p>
+            &copy; Copyright Ping. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
 
-  <footer>
+  <footer style="padding-bottom: 2rem;">
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://www.mashofa.my.id">mashofa</a>.
     </p>
   </footer>
+
+  <!-- <script src="../utilz/validation.js" type="module"></script> -->
+  <script type="module" src="main.js"></script>
+ 
 </body>
 </html>
