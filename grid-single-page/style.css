@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root{
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+
+    --Light-Gray: hsl(204, 43%, 93%);
+--Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+    color: var(--Grayish-Blue);
+}
+
+body{
+    position: relative;
+}
+
+footer{
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+}
+
+.main-grid{
+    width: 100%;
+    display: grid;
+    grid-template-areas: "a" "b" "c";
+}
+
+section.join{ grid-area: a;}
+section.monthly{ grid-area: b;}
+section.why-us{ grid-area: c;}
+
+.container {
+    padding: 0 2rem;
+}
+
+.join{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.join>h1{
+    color: var(--Cyan);
+}
+.join > p:nth-child(2){
+    color: var(--Bright-Yellow);
+    font-weight: 700;
+    /* font-size: 1rem; */
+}
+.join > p:nth-child(3){
+    line-height: 1.7rem;
+}
+
+.monthly{
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    color: #fff;
+    background-color: var(--Cyan);
+}
+.monthly .monthly__price  > span{
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #fff;
+}
+.monthly__price{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    color: var(--Light-Gray);
+}
+
+.monthly button{
+    width: 100%;
+    padding: 1rem 0;
+    background-color: var(--Bright-Yellow);
+    appearance: unset;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px 0 rgba(52, 74, 10, 0.325);
+}
+
+.why-us{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: hsl(179, 62%, 47%);
+    color: #fff;
+}
+
+ul{
+    padding: 0;
+}
+ul > li {
+    list-style: none;
+    line-height: 1.5rem;
+}
+
+.why-us >ul{
+    margin-top: 1.6rem;
+}
+
+@media only screen and (min-width: 376px){
+    main{
+        min-height: 100vh;
+    }
+    .container{
+       padding-left: 5rem;
+       padding-right: 5rem;
+    }
+    .main-grid{
+        grid-template-columns: 1fr 1fr;   
+        grid-template-areas: "a a" "b c";
+        min-height: 100vh;
+    }
+
+    .why-us,.monthly,.join{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    p,li{
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    h1,h2{
+        font-size: 2.5rem;
+    }
+}
