@@ -14,4 +14,89 @@
 html{
     font-size: 13px;
     font-family: 'Manrope', sans-serif;
+    background-color: var(--Light-Grayish-Blue);
+}
+
+main{
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    display:flex;
+    flex-direction: row;
+    max-width: 750px;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: #fff;
+}
+.card > .card-image {
+    flex: 0 0 40%;
+    line-height: 0;
+}
+.card > .card-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card > .card-text{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    flex: 0 0 2;
+    padding: 1rem 2rem;
+}
+
+.card-text > h2{
+    font-size: 1.5rem;
+}
+
+.card-text__profile-share{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.profile-share__picture img{
+    border-radius: 50px;
+    width: 30px;
+}
+.profile{
+    margin-left: 2rem;
+}
+.profile-share__name{
+    font-weight: 700;
+}
+
+.icons{
+    align-self: center;
+    justify-items: end;
+    /* display: flex
+    ; */
+    flex: 1;
+    line-height: 0;
+}
+#iconShare > div:hover{
+    background-color: var(--Desaturated-Dark-Blue);
+    cursor: pointer;
+}
+#iconShare > div:hover svg path{
+    fill: #fff;
+}
+
+#iconShare > div {
+    width: 35px;
+    height: 35px;
+    background-color: var(--Light-Grayish-Blue);
+    border-radius: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.share-list{
+    overflow: hidden;
+    height: 0;
 }
